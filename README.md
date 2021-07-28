@@ -19,7 +19,7 @@ by generating visualizations that are eye catching and interactive using plotly.
 4. Designing our layout
 5. Implement dashboard and test locally
 6. Engineering check: files necessary to successfully deploy 
-7. Hosting the dashboar
+7. Hosting the dashboard
 
 ### Workshop Instructors
 
