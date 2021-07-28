@@ -8,8 +8,7 @@ Knowledge of working with pandas needed to engage with the material in this work
 
 ### Workshop description
 
-In this workshop we will use pandas, plotly and Dash to create a dashboard that explores changes in the average housing price for the last 5 years. In this workshop, we will start
-by generating visualizations that are eye catching and interactive using plotly. We will then work together to bring our functions into a script. Participants will be introduced into dashboarding, layout options, and will work together to generate and test a local dashboard. Participants will learn how to deploy their dashboard to production. 
+In this workshop we will use pandas, plotly and Dash to create a dashboard that explores changes in the average housing price in various provinces in Canada for the last 5 years. In this workshop, we will start by generating visualizations that are eye catching and interactive using plotly. We will then work together to bring our functions into a script. Participants will be introduced into dashboarding, layout options, and will work together to generate and test a local dashboard. Participants will learn how to deploy their dashboard to production. 
 
 ### Workshop schedule
 
