@@ -23,6 +23,6 @@ by generating visualizations that are eye catching and interactive using plotly.
 
 ### Workshop Instructors
 
-Laura Gutierrez Funderburk
+Laura Gutierrez Funderburk (she/her)
 
 Laura works as a data scientist at Cybera. Laura has a B.Sc. in Mathematics from Simon Fraser University, and was awarded a Terry Fox Gold medal for overcoming severe childhood trauma and helping the communities she forms part of. In her spare time, she is a co-organizer for PyLadies Vancouver, and is enthusiastic about cycling by the seaside and trail running. 
