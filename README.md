@@ -2,6 +2,22 @@
 
 ### Workshop level: intermediate
 
+### How to access material
+
+From your local computer, open your terminal and enter
+
+`git clone https://github.com/Vancouver-Datajam/dashboard-workshop-dash.git`
+
+`cd notebooks`
+
+We will use Jupyter notebook/lab for this workshop. From this location, type on your terminal
+
+`jupyter lab`
+
+or
+
+`jupyter notebook`
+
 ### Background knowledge
 
 Knowledge of working with pandas needed to engage with the material in this workshop. Knowledge of function definition assumed. Recommended to be familiar with at least one visualizing library in Python. Working knowledge of plotly is a plus, but not necessary. Knowledge of HTML is not necessary. 
