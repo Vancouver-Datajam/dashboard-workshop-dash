@@ -33,42 +33,40 @@ Prior to joining this workshop, participants will need a GitHub account, as well
   2. Anaconda on Mac https://docs.anaconda.com/anaconda/install/mac-os/
   3. Anaconda on Linux https://docs.anaconda.com/anaconda/install/linux/
 
-Once you have installed Anaconda 
 From your local computer, open your terminal and enter
 
-  git clone https://github.com/Vancouver-Datajam/dashboard-workshop-dash.git
+    git clone https://github.com/Vancouver-Datajam/dashboard-workshop-dash.git
 
 Please ensure you create a virtual environment prior to engaging with the workshop material. 
 
+For MacOS and Linux, use your terminal and enter the following two commands:
 
-To create and activate a virtual environment from MacOS or Linux
-
-  python3 -m venv env
-  source env/bin/activate
+    python3 -m venv env
+    source env/bin/activate
   
-To create a virtual environment from Windows
+For Windows, use the Anaconda Prompt and enter the following two commands. 
 
-  py -m venv env
-  .\env\Scripts\activate
+    py -m venv env
+    .\env\Scripts\activate
 
 Once created, you will need to install required dependencies:
 
-  pip install -r requirements.txt
-  ipython kernel install --user --name=.env
+    pip install -r requirements.txt
+    ipython kernel install --user --name=.env
   
 You can then navigate to the notebooks/ directory 
   
-  cd notebooks/
+    cd notebooks/
 
 We will use Jupyter notebook for this workshop. From this location, type on your terminal
 
-`jupyter notebook`
+    jupyter notebook
 
 Once you are done with the notebook, you can shutdown your local instance by entering `CTRL + C`. 
 
 Remember to deactivate your virtual environment:
   
-  deactivate
+    deactivate
 
 Read more https://packaging.python.org/guides/installing-using-pip-and-virtual-environments/ 
 
