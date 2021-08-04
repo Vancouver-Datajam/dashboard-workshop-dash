@@ -17,7 +17,7 @@ In this workshop we will use pandas, plotly and Dash to create a dashboard that 
 3. Introduction to Dash and layouts 
 4. Designing our layout
 5. Implement dashboard and test locally
-6. Engineering check: files necessary to successfully deploy 
+6. Engineering check: files necessary to successfully deploy. Hint: you can find them [here](https://github.com/Vancouver-Datajam/dashboard-prep)
 7. Hosting the dashboard
 
 ### Setup prep
