@@ -20,7 +20,7 @@ or
 
 ### Background knowledge
 
-Knowledge of working with pandas needed to engage with the material in this workshop. Knowledge of function definition assumed. Recommended to be familiar with at least one visualizing library in Python. Working knowledge of plotly is a plus, but not necessary. Knowledge of HTML is not necessary. 
+Knowledge of working with pandas needed to engage with the material in this workshop. Familiarity with Git and Github required (knowing how to clone a repository, create a repository, as well as add, commit and push changes to a repository). Knowledge of function definition assumed. Recommended to be familiar with at least one visualizing library in Python. Working knowledge of plotly is a plus, but not necessary. Knowledge of HTML is not necessary. 
 
 ### Workshop description
 
@@ -35,6 +35,22 @@ In this workshop we will use pandas, plotly and Dash to create a dashboard that 
 5. Implement dashboard and test locally
 6. Engineering check: files necessary to successfully deploy 
 7. Hosting the dashboard
+
+### Setup
+
+Prior to joining this workshop, participants will need a GitHub account, as well as a Heroku account. 
+
+- See how to create a GitHub account https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account 
+
+- To create a Heroku account visit https://signup.heroku.com/
+
+- Please have Anaconda installed along with Python 3.6 or higher
+
+Anaconda on Windows https://docs.anaconda.com/anaconda/install/windows/
+
+Anaconda on Mac https://docs.anaconda.com/anaconda/install/mac-os/
+
+Anaconda on Linux https://docs.anaconda.com/anaconda/install/linux/
 
 ### Workshop Instructors
 
