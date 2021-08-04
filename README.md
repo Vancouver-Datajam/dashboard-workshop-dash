@@ -29,9 +29,9 @@ Prior to joining this workshop, participants will need a GitHub account, as well
 * To create a Heroku account visit https://signup.heroku.com/
 
 * Please have Anaconda installed along with Python 3.6 or higher:
-1. Anaconda on Windows https://docs.anaconda.com/anaconda/install/windows/
-2. Anaconda on Mac https://docs.anaconda.com/anaconda/install/mac-os/
-3. Anaconda on Linux https://docs.anaconda.com/anaconda/install/linux/
+  1. Anaconda on Windows https://docs.anaconda.com/anaconda/install/windows/
+  2. Anaconda on Mac https://docs.anaconda.com/anaconda/install/mac-os/
+  3. Anaconda on Linux https://docs.anaconda.com/anaconda/install/linux/
 
 Once you have installed Anaconda 
 From your local computer, open your terminal and enter
