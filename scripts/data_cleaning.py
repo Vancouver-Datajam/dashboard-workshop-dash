@@ -6,7 +6,7 @@ def data_prep(data_file):
     temp = df.copy()
 
     #Removing empty rows
-    temp.dropna(thresh=2, inplace=True)
+    temp.dropna(thresh=3, inplace=True)
 
     #Reseting columns - Changing the column names using the values in the 1st row
     temp_header = temp.iloc[0,]
