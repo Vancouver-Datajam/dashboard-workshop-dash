@@ -36,6 +36,7 @@ Prior to joining this workshop, participants will need a GitHub account, as well
 From your local computer, open your terminal and enter
 
     git clone https://github.com/Vancouver-Datajam/dashboard-workshop-dash.git
+    cd dashboard-workshop-dash/
 
 Please ensure you create a virtual environment prior to engaging with the workshop material. 
 
