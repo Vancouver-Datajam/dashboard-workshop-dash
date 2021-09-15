@@ -73,27 +73,36 @@ app.layout = html.Div([
 ])
 
 app.layout = html.Div([
-    html.Div([
-        html.H1("Housing graphs"),
-        dcc.Dropdown(
-            id='province',
-            options=[{'label': i, 'value': i} for i in data_pop_del_mort_df['Geography'].unique()],
-            value= 'Newfoundland'
-        )
-    ]),
+    html.Div(
+        className="six columns",
+        children = [
+            html.H1("Housing graphs"),
+                dcc.Dropdown(
+                    id='province',
+                    options=[{'label': i, 'value': i} for i in data_pop_del_mort_df['Geography'].unique()],
+                    value= 'Newfoundland'
+                ),
+            
+            html.Div([
+                   dcc.Graph(id='graph-time-mortgage')
+                    ], className="six columns"),
+            
+            html.Div([
+                dcc.Graph(id='graph-time-del')
+                ], className="six columns"),
+            
+            ]),
     
-    html.Div([
-        html.Div([
-            dcc.Graph(id='graph-time-mortgage')
-        ], className="six columns"),
-
-        html.Div([
-            dcc.Graph(id='graph-time-del')
-        ], className="six columns"),
-    ], className="row")
+    html.Div(
+        className="six columns",
+        children = [
+            html.Div([
+            dcc.Graph(id='scatter-mortgage-del')
+            ]),
+        ])
 ])
 
-      
+
     
 @app.callback(
     Output('graph-time-mortgage', 'figure'),
@@ -113,7 +122,39 @@ def update_figure2(selected_province):
     fig2 = graph_region(filtered_df, 'line', "Time", "DelinquencyRate")
     return fig2
 
+@app.callback(
+    Output('scatter-mortgage-del', 'figure'),
+    Input('province', 'value'))
+def update_figure3(selected_province):
+    df = data_pop_del_mort_df
+    filtered_df = df[df['Geography'] == selected_province]  
+    fig3 = graph_region(filtered_df, 'scatter', "AverageMortgageAmount", "DelinquencyRate")
+    return fig3
         
 if __name__ == '__main__':  
     
     app.run_server(debug=True) 
+
+    
+# app.layout = html.Div([
+#     html.Div(
+#         className="row",
+#         children = [
+#                 html.H1("Housing graphs"),
+#                 dcc.Dropdown(
+#                     id='province',
+#                     options=[{'label': i, 'value': i} for i in data_pop_del_mort_df['Geography'].unique()],
+#                     value= 'Newfoundland'
+#                 )
+#             ]),
+
+#         html.Div([
+#             html.Div([
+#                 dcc.Graph(id='graph-time-mortgage')
+#             ], className="six columns"),
+
+#             html.Div([
+#                 dcc.Graph(id='graph-time-del')
+#             ], className="six columns"),
+#         ])
+# ])
