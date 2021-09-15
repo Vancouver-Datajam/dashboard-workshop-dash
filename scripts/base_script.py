@@ -28,7 +28,7 @@ def graph_region(region_df, graph_type: str, dimension1: str, dimension2: str) -
         title_string = f'Chart: {graph_type} plot of {dimension1} and {dimension2} by Geography'
         fig.update_layout(title = title_string)
         fig.update_xaxes(tickangle=-45)
-        fig.show()
+        return fig
     
     except KeyError:
         print("Key not found. Make sure that 'graph_type' is in ['box','violin', 'scatter', 'line']")
