@@ -1,3 +1,4 @@
+
 import pandas as pd
 import plotly.express as px
 import dash
@@ -25,23 +26,21 @@ def graph_region(region_df, graph_type: str, dimension1: str, dimension2: str) -
     try:
         # Initialize function
         fig = plot_dict[graph_type](region_df, 
-                                    x = dimension1, 
-                                    y = dimension2, 
+                                    x=dimension1, 
+                                    y=dimension2, 
                                     color = "Geography",
-                                    hover_name = "Time")
+                                   hover_name = "Time")
         # Format figure 
         title_string = f'Chart: {graph_type} plot of {dimension1} and {dimension2} by Geography'
         fig.update_layout(title = title_string)
         fig.update_xaxes(tickangle=-45)
-        fig.show()
+        return fig
     
     except KeyError:
         print("Key not found. Make sure that 'graph_type' is in ['box','violin', 'scatter', 'line']")
     except ValueError:
         print("Dimension is not valid. dimension1 is one of 'Time' or 'Geography'")
         print("dimension2 is one of 'AverageMortgageAmount', 'DelinquencyRate', 'PopulationSize'")
-        
-        
         
 # ----------------------------------------------------------------------------------#
 # Read data
@@ -51,6 +50,7 @@ data_pop_del_mort_df = pd.read_csv(url, index_col=0)
 
 # ----------------------------------------------------------------------------------#
 # App section        
+        
 
 # Stylesheets
 external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
@@ -59,6 +59,18 @@ external_stylesheets = ['https://codepen.io/chriddyp/pen/bWLwgP.css']
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
 server = app.server
 
+app.layout = html.Div([
+             # This div contains a header H1, a dropdown to select the kind of plot and the plot
+            html.H1("Different kinds of plots"),
+            dcc.Dropdown(
+                        id='graph-type',
+                        options=[{'label': 'Violin plot', 'value': 'violin'},
+                                {'label': 'Box plot', 'value': 'box'}],
+                        value= 'box'),
+            dcc.Graph(id='graph-render')
+
+        
+])
 
 app.layout = html.Div([
     html.Div([
@@ -72,11 +84,11 @@ app.layout = html.Div([
     
     html.Div([
         html.Div([
-            dcc.Graph(id='graph-time-mortgage', figure={'data': [{'y': [1, 2, 3]}]})
+            dcc.Graph(id='graph-time-mortgage')
         ], className="six columns"),
 
         html.Div([
-            dcc.Graph(id='graph-time-del', figure={'data': [{'y': [1, 2, 3]}]})
+            dcc.Graph(id='graph-time-del')
         ], className="six columns"),
     ], className="row")
 ])
@@ -101,6 +113,7 @@ def update_figure2(selected_province):
     fig2 = graph_region(filtered_df, 'line', "Time", "DelinquencyRate")
     return fig2
 
-# ----------------------------------------------------------------------------------#
-if __name__ == '__main__':    
+        
+if __name__ == '__main__':  
+    
     app.run_server(debug=True) 
