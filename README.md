@@ -28,7 +28,7 @@ Prior to joining this workshop, participants will need a GitHub account, as well
 
 * To create a Heroku account visit https://signup.heroku.com/
 
-* Install Heroku
+* Install Heroku https://devcenter.heroku.com/articles/heroku-cli
 
 * Please have Anaconda installed along with Python 3.6 or higher:
   1. Anaconda on Windows https://docs.anaconda.com/anaconda/install/windows/
