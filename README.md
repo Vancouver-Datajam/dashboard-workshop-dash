@@ -53,9 +53,9 @@ For Windows, use the Anaconda Prompt and enter the following two commands.
     .\env\Scripts\activate
 
 Once created, you will need to install required dependencies:
-
+  
+    pip install --upgrade pip setuptools wheel
     pip install -r requirements.txt
-    ipython kernel install --user --name=.env
   
 You can then navigate to the notebooks/ directory 
   
